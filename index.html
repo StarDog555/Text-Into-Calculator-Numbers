@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Calculator Numbers</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 40px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .Input-form {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .Text-input {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            width: 180px;
+        }
+
+        .SubmitBtn {
+            padding: 8px 14px;
+            font-size: 16px;
+            border: 1px solid #888;
+            background: #ddd;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .SubmitBtn:hover {
+            background: #ccc;
+        }
+
+        .Span-div {
+            width: 300px;
+            height: 80px;
+            padding: 10px 15px;
+            box-sizing: border-box;
+
+            background: #151515;
+            border: 5px solid #333;
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            box-shadow: inset 0 0 10px #000;
+        }
+
+        .Span-div span {
+            font-family: "Orbitron", monospace;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            color: #7cff5b;
+            text-align: right;
+            text-shadow: 0 0 5px #7cff5b;
+        }
+
+        .Key,
+        .Instructions {
+            width: 300px;
+            margin-top: 20px;
+            padding: 15px;
+            box-sizing: border-box;
+
+            background: white;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+
+            text-align: left;
+        }
+
+        .Key h3,
+        .Instructions h3 {
+            margin: 0 0 12px 0;
+            text-align: center;
+        }
+
+        .Key-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .Key-grid p {
+            margin: 0;
+            padding: 6px;
+
+            background: #eee;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .Instructions p {
+            margin: 7px 0;
+            padding: 0;
+            line-height: 1.4;
+        }
+        .note {
+            font-style: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="Input-form">
+      <input
+          type="text"
+          class="Text-input"
+          placeholder="Enter a word"
+          maxlength="8"
+        >
+
+        <button class="SubmitBtn" type="submit">
+            Submit
+        </button>
+    </form>
+
+    <div class="Span-div">
+        <span>0</span>
+    </div>
+
+    <div class="Key">
+        <h3>Key</h3>
+
+        <div class="Key-grid">
+            <p>0 = O</p>
+            <p>1 = I</p>
+            <p>2 = Z</p>
+            <p>3 = E</p>
+            <p>4 = H, N</p>
+            <p>5 = S</p>
+            <p>6 = P, Y</p>
+            <p>7 = L, U, T</p>
+            <p>8 = B, A</p>
+            <p>9 = G</p>
+        </div>
+    </div>
+
+    <div class="Instructions">
+        <h3>Instructions</h3>
+
+        <p>1. Type a word into the input box.</p>
+        <p>2. Click Submit.</p>
+        <p>3. The letters are converted into calculator numbers.</p>
+        <p>4. Type the inputed Numbers into the calculator.</p>
+        <p>5. Turn the calculator upside down to read the word.</p>
+        <p class="note">Note: Only letters in the key can be converted.</p>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
